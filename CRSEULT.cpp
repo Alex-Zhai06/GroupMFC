@@ -26,6 +26,22 @@ void CRSEULT::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 }
 
+//控制屏幕中间位置文本：当前选择的射门方向
+void CRSEULT::SetShootDirection(const CString& direction)
+{
+	m_direction = direction;
+
+}
+
+BOOL CRSEULT::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+	// 设置静态文本控件的内容为当前选择的射门方向
+	CString text;
+	text.Format(_T("你的射门方向：%s"), m_direction.GetString());
+	SetDlgItemText(IDC_STATIC_CHOICE_A, text);
+	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
+}
 
 BEGIN_MESSAGE_MAP(CRSEULT, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CRSEULT::OnBnClickedButton1)

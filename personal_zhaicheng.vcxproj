@@ -213,6 +213,7 @@
     <None Include="res\personalzhaicheng.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="result_goal800.bmp" />
     <Image Include="res\bitmap3.bmp" />
     <Image Include="res\personal_zhaicheng.ico" />
     <Image Include="shoot_goal_view720p.bmp" />

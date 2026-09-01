@@ -23,4 +23,14 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
+
+//控制结果页的静态文字："你的射门方向：XXX"
+public:
+	void SetShootDirection(const CString& direction);
+
+protected:
+	virtual BOOL OnInitDialog();
+
+private:
+	CString m_direction; // 用于存储在上一页面选择的射门方向
 };

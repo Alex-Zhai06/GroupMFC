@@ -67,7 +67,12 @@ void CSHOOTDialog::OnBnClicked1000()
 	SetDlgItemText(IDC_STATIC_TIP, _T("射门中……请稍等")); //修改原来的“请选择射门方向”为射门中……请稍等
 	GetDlgItem(IDC_STATIC_TIP)->UpdateWindow();
 	Sleep(900); // 模拟射门过程，延迟0.9秒
-	cw4.DoModal();
+
+	m_direction = _T("左侧");
+	CRSEULT dlg(this);
+	dlg.SetShootDirection(m_direction); // 将选择的射门方向传递给射门页面
+	dlg.DoModal();
+	//cw4.DoModal();
 }
 
 void CSHOOTDialog::OnBnClicked1001()
@@ -76,5 +81,10 @@ void CSHOOTDialog::OnBnClicked1001()
 	SetDlgItemText(IDC_STATIC_TIP, _T("射门中……请稍等")); //修改原来的“请选择射门方向”为射门中……请稍等
 	GetDlgItem(IDC_STATIC_TIP)->UpdateWindow();
 	Sleep(900); // 模拟射门过程，延迟0.9秒
-	cw4.DoModal();
+
+	m_direction = _T("右侧");
+	CRSEULT dlg(this);
+	dlg.SetShootDirection(m_direction); // 将选择的射门方向传递给射门页面
+	dlg.DoModal();
+	//cw4.DoModal();
 }

@@ -26,6 +26,7 @@ public:
 
 private:
 	CRSEULT cw4; //生成结果对话框
+	CString m_direction; // 用于存储在这一页上选择的射门方向
 public:
 	afx_msg void OnBnClicked1000();
 	afx_msg void OnBnClicked1001();
