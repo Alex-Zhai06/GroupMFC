@@ -86,5 +86,17 @@
     <Image Include="welcome_bg720p.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="team_argentina900p.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="team_argentina400p.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="team_spain400p.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="team_england400p.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
