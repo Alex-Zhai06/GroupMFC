@@ -23,8 +23,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	CString stulist;
-	CSHOOTDialog cw3;
+	CSHOOTDialog cw3; //生成射门页面
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();

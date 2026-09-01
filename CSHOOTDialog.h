@@ -25,7 +25,7 @@ public:
 	afx_msg void OnBnClicked1002();
 
 private:
-	CRSEULT cw4;
+	CRSEULT cw4; //生成结果对话框
 public:
 	afx_msg void OnBnClicked1000();
 	afx_msg void OnBnClicked1001();

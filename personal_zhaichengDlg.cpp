@@ -103,21 +103,8 @@ BOOL CpersonalzhaichengDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	SetWindowText(_T("美加墨世界杯点球模拟软件"));
-	/*
-	// Picture Control 放到最底层
-	GetDlgItem(IDC_PICTURE_BG)->SetWindowPos(
-		&CWnd::wndBottom,
-		0, 0, 0, 0,
-		SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE
-	);
-
-	// 按钮放到最上层
-	GetDlgItem(IDC_BUTTON1)->SetWindowPos(
-		&CWnd::wndTop,
-		0, 0, 0, 0,
-		SWP_NOMOVE | SWP_NOSIZE
-	);*/
+	SetWindowText(_T("美加墨世界杯点球模拟软件")); //将页面左上角的注释设置为“美加墨世界杯点球模拟软件”
+	
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 

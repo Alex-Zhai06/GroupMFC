@@ -35,9 +35,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	CString username;
-	CString password;
-	CSL cw2;
+	CSL cw2; //生成选择球队国家的页面
 	
 public:
 	afx_msg void OnBnClickedButton1();
