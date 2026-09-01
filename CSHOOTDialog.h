@@ -29,4 +29,14 @@ private:
 public:
 	afx_msg void OnBnClicked1000();
 	afx_msg void OnBnClicked1001();
+
+//控制射门页的静态文字："当前选择：XXX"
+public:
+	void SetCountry(const CString& country);
+
+protected:
+	virtual BOOL OnInitDialog();
+
+private:
+	CString m_country; // 用于存储在上一页面选择的国家
 };

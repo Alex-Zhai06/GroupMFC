@@ -24,6 +24,7 @@ protected:
 
 private:
 	CSHOOTDialog cw3; //生成射门页面
+	CString m_country; // 用于存储在这一页上选择的国家
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();

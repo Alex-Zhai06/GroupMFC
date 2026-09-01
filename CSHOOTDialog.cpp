@@ -29,6 +29,22 @@ void CSHOOTDialog::DoDataExchange(CDataExchange* pDX)
 	CDialogEx::DoDataExchange(pDX);
 }
 
+//控制屏幕中上位置文本：当前选择的国家
+void CSHOOTDialog::SetCountry(const CString& country) 
+{
+	m_country = country;
+	
+}
+
+BOOL CSHOOTDialog::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+	// 设置静态文本控件的内容为当前选择的国家
+	CString text;
+	text.Format(_T("当前选择：%s"), m_country.GetString());
+	SetDlgItemText(IDC_STATIC_CHOICE, text);
+	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
+}
 
 BEGIN_MESSAGE_MAP(CSHOOTDialog, CDialogEx)
 	ON_BN_CLICKED(1002, &CSHOOTDialog::OnBnClicked1002)

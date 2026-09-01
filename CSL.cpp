@@ -48,18 +48,27 @@ void CSL::OnBnClickedButton1()
 void CSL::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	cw3.DoModal();
+	m_country = _T("西班牙");
+	CSHOOTDialog dlg(this);
+	dlg.SetCountry(m_country); // 将选择的国家传递给射门页面
+	dlg.DoModal();
 
 }
 
 void CSL::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	cw3.DoModal();
+	m_country = _T("阿根廷");
+	CSHOOTDialog dlg(this);
+	dlg.SetCountry(m_country); // 将选择的国家传递给射门页面
+	dlg.DoModal();
 }
 
 void CSL::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	cw3.DoModal();
+	m_country = _T("英格兰");
+	CSHOOTDialog dlg(this);
+	dlg.SetCountry(m_country); // 将选择的国家传递给射门页面
+	dlg.DoModal();
 }
