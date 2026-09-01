@@ -64,11 +64,17 @@ void CSHOOTDialog::OnBnClicked1002()
 void CSHOOTDialog::OnBnClicked1000()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	SetDlgItemText(IDC_STATIC_TIP, _T("射门中……请稍等")); //修改原来的“请选择射门方向”为射门中……请稍等
+	GetDlgItem(IDC_STATIC_TIP)->UpdateWindow();
+	Sleep(900); // 模拟射门过程，延迟0.9秒
 	cw4.DoModal();
 }
 
 void CSHOOTDialog::OnBnClicked1001()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	SetDlgItemText(IDC_STATIC_TIP, _T("射门中……请稍等")); //修改原来的“请选择射门方向”为射门中……请稍等
+	GetDlgItem(IDC_STATIC_TIP)->UpdateWindow();
+	Sleep(900); // 模拟射门过程，延迟0.9秒
 	cw4.DoModal();
 }
