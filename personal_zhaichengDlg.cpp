@@ -67,6 +67,7 @@ BEGIN_MESSAGE_MAP(CpersonalzhaichengDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CpersonalzhaichengDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CpersonalzhaichengDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -103,12 +104,20 @@ BOOL CpersonalzhaichengDlg::OnInitDialog()
 
 	// TODO: 在此添加额外的初始化代码
 	SetWindowText(_T("美加墨世界杯点球模拟软件"));
+	/*
+	// Picture Control 放到最底层
+	GetDlgItem(IDC_PICTURE_BG)->SetWindowPos(
+		&CWnd::wndBottom,
+		0, 0, 0, 0,
+		SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE
+	);
+
+	// 按钮放到最上层
 	GetDlgItem(IDC_BUTTON1)->SetWindowPos(
 		&CWnd::wndTop,
 		0, 0, 0, 0,
 		SWP_NOMOVE | SWP_NOSIZE
-	);
-
+	);*/
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -169,3 +178,9 @@ void CpersonalzhaichengDlg::OnBnClickedButton1()
 	
 }
 
+
+void CpersonalzhaichengDlg::OnBnClickedButton2()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	OnCancel();
+}
