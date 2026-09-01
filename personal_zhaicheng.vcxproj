@@ -183,8 +183,9 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CRSEULT.h" />
+    <ClInclude Include="CSHOOTDialog.h" />
     <ClInclude Include="CSL.h" />
-    <ClInclude Include="CWINwrong.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="personal_zhaicheng.h" />
@@ -193,8 +194,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CRSEULT.cpp" />
+    <ClCompile Include="CSHOOTDialog.cpp" />
     <ClCompile Include="CSL.cpp" />
-    <ClCompile Include="CWINwrong.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -211,7 +213,10 @@
     <None Include="res\personalzhaicheng.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\bitmap3.bmp" />
     <Image Include="res\personal_zhaicheng.ico" />
+    <Image Include="shoot_goal_view720p.bmp" />
+    <Image Include="welcome_bg720p.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

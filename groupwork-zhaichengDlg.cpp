@@ -1,11 +1,10 @@
 ﻿
-// personal_zhaichengDlg.cpp: 实现文件
+// groupwork-zhaichengDlg.cpp: 实现文件
 //
 
 #include "pch.h"
-#include "framework.h"
-#include "personal_zhaicheng.h"
-#include "personal_zhaichengDlg.h"
+#include "personal-zhaicheng.h"
+#include "groupwork-zhaichengDlg.h"
 #include "afxdialogex.h"
 
 #ifdef _DEBUG
@@ -46,33 +45,31 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CpersonalzhaichengDlg 对话框
+// CgroupworkzhaichengDlg 对话框
 
 
 
-CpersonalzhaichengDlg::CpersonalzhaichengDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_PERSONAL_ZHAICHENG_DIALOG, pParent)
+CgroupworkzhaichengDlg::CgroupworkzhaichengDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_GROUPWORKZHAICHENG_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CpersonalzhaichengDlg::DoDataExchange(CDataExchange* pDX)
+void CgroupworkzhaichengDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	
 }
 
-BEGIN_MESSAGE_MAP(CpersonalzhaichengDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CgroupworkzhaichengDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDC_BUTTON1, &CpersonalzhaichengDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
-// CpersonalzhaichengDlg 消息处理程序
+// CgroupworkzhaichengDlg 消息处理程序
 
-BOOL CpersonalzhaichengDlg::OnInitDialog()
+BOOL CgroupworkzhaichengDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -102,17 +99,18 @@ BOOL CpersonalzhaichengDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-	SetWindowText(_T("美加墨世界杯点球模拟软件"));
-	GetDlgItem(IDC_BUTTON1)->SetWindowPos(
-		&CWnd::wndTop,
-		0, 0, 0, 0,
-		SWP_NOMOVE | SWP_NOSIZE
-	);
+	SetWindowText(_T("射门")); //将窗口左上角的标题改为“射门”
+
+	//根据之前选择的国家名称，显示在静态文本控件中，“当前选择：XXX”
+	CString country = _T("阿根廷"); //country变量存储前一页选择的国家名称
+	CString text;
+	text.Format(_T("当前选择：%s"), country.GetString());
+	SetDlgItemText(IDC_STATIC_CHOICE, text);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CpersonalzhaichengDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CgroupworkzhaichengDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -129,7 +127,7 @@ void CpersonalzhaichengDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  来绘制该图标。  对于使用文档/视图模型的 MFC 应用程序，
 //  这将由框架自动完成。
 
-void CpersonalzhaichengDlg::OnPaint()
+void CgroupworkzhaichengDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -156,16 +154,8 @@ void CpersonalzhaichengDlg::OnPaint()
 
 //当用户拖动最小化窗口时系统调用此函数取得光标
 //显示。
-HCURSOR CpersonalzhaichengDlg::OnQueryDragIcon()
+HCURSOR CgroupworkzhaichengDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
-}
-
-
-void CpersonalzhaichengDlg::OnBnClickedButton1()
-{
-	// TODO: 在此添加控件通知处理程序代码
-	cw2.DoModal();
-	
 }
 

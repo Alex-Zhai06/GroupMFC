@@ -1,28 +1,27 @@
 ﻿
-// personal_zhaichengDlg.h: 头文件
+// groupwork-zhaichengDlg.h: 头文件
 //
 
 #pragma once
-#include "CSL.h"
+#include "afxdialogex.h"
 
-
-
-// CpersonalzhaichengDlg 对话框
-class CpersonalzhaichengDlg : public CDialogEx
+// CgroupworkzhaichengDlg 对话框
+class CgroupworkzhaichengDlg : public CDialogEx
 {
 // 构造
+	DECLARE_DYNAMIC(CSL)
 public:
-	CpersonalzhaichengDlg(CWnd* pParent = nullptr);	// 标准构造函数
-
+	CgroupworkzhaichengDlg(CWnd* pParent = nullptr);	// 标准构造函数
+	
 // 对话框数据
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_PERSONAL_ZHAICHENG_DIALOG };
+	enum { IDD = IDD_GROUPWORKZHAICHENG_DIALOG };
 #endif
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
-
-
+	DECLARE_MESSAGE_MAP()
+/*
 // 实现
 protected:
 	HICON m_hIcon;
@@ -32,13 +31,5 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
-	DECLARE_MESSAGE_MAP()
-
-private:
-	CString username;
-	CString password;
-	CSL cw2;
-	
-public:
-	afx_msg void OnBnClickedButton1();
+	DECLARE_MESSAGE_MAP()*/
 };

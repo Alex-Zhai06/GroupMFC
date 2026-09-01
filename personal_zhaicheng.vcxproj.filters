@@ -33,10 +33,13 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CWINwrong.h">
+    <ClInclude Include="CSL.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CSL.h">
+    <ClInclude Include="CSHOOTDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRSEULT.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,10 +53,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CWINwrong.cpp">
+    <ClCompile Include="CSL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CSL.cpp">
+    <ClCompile Include="CSHOOTDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CRSEULT.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,6 +75,15 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\personal_zhaicheng.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shoot_goal_view720p.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="welcome_bg720p.bmp">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

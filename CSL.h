@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "afxdialogex.h"
-//#include "CQUIT.h"
+#include "CSHOOTDialog.h"
 
 // CSL 对话框
 
@@ -24,7 +24,7 @@ protected:
 
 private:
 	CString stulist;
-	//CQUIT cw3;
+	CSHOOTDialog cw3;
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();

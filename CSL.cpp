@@ -5,10 +5,9 @@
 #include "personal_zhaicheng.h"
 #include "afxdialogex.h"
 #include "CSL.h"
-#include<fstream>
-#include<atlconv.h>
 
-bool Saved = false;
+
+
 // CSL 对话框
 
 IMPLEMENT_DYNAMIC(CSL, CDialogEx)
@@ -32,6 +31,7 @@ void CSL::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CSL, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CSL::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CSL::OnBnClickedButton2)
 	ON_BN_CLICKED(IDC_BUTTON3, &CSL::OnBnClickedButton3)
 	ON_BN_CLICKED(IDC_BUTTON4, &CSL::OnBnClickedButton4)
 END_MESSAGE_MAP()
@@ -48,15 +48,18 @@ void CSL::OnBnClickedButton1()
 void CSL::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	cw3.DoModal();
 
 }
 
 void CSL::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	cw3.DoModal();
 }
 
 void CSL::OnBnClickedButton4()
 {
 	// TODO: 在此添加控件通知处理程序代码
+	cw3.DoModal();
 }
