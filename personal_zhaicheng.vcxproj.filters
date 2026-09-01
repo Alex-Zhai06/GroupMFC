@@ -39,9 +39,6 @@
     <ClInclude Include="CSL.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CQUIT.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="personal_zhaicheng.cpp">
@@ -57,9 +54,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CSL.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CQUIT.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

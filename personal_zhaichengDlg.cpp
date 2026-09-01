@@ -59,8 +59,7 @@ CpersonalzhaichengDlg::CpersonalzhaichengDlg(CWnd* pParent /*=nullptr*/)
 void CpersonalzhaichengDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_EDIT1, username);
-	DDX_Text(pDX, IDC_EDIT2, password);
+	
 }
 
 BEGIN_MESSAGE_MAP(CpersonalzhaichengDlg, CDialogEx)
@@ -68,8 +67,6 @@ BEGIN_MESSAGE_MAP(CpersonalzhaichengDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CpersonalzhaichengDlg::OnBnClickedButton1)
-	ON_EN_CHANGE(IDC_EDIT2, &CpersonalzhaichengDlg::OnEnChangeEdit2)
-	ON_BN_CLICKED(IDC_BUTTON2, &CpersonalzhaichengDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -163,28 +160,7 @@ HCURSOR CpersonalzhaichengDlg::OnQueryDragIcon()
 void CpersonalzhaichengDlg::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	UpdateData(TRUE);
-	if (username != "zhaicheng" || password != "06025313") {
-		cw1.DoModal();
-	}
-	else {
-		cw2.DoModal();
-	}
-	//username
+	cw2.DoModal();
+	
 }
 
-void CpersonalzhaichengDlg::OnEnChangeEdit2()
-{
-	// TODO:  如果该控件是 RICHEDIT 控件，它将不
-	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
-	// 函数并调用 CRichEditCtrl().SetEventMask()，
-	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
-
-	// TODO:  在此添加控件通知处理程序代码
-}
-
-void CpersonalzhaichengDlg::OnBnClickedButton2()
-{
-	// TODO: 在此添加控件通知处理程序代码
-	OnCancel();
-}

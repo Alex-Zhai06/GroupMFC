@@ -38,11 +38,8 @@ protected:
 private:
 	CString username;
 	CString password;
-	CWINwrong cw1;
 	CSL cw2;
 	
 public:
 	afx_msg void OnBnClickedButton1();
-	afx_msg void OnEnChangeEdit2();
-	afx_msg void OnBnClickedButton2();
 };

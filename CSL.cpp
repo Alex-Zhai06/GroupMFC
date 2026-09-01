@@ -26,56 +26,37 @@ CSL::~CSL()
 void CSL::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	DDX_Text(pDX, IDC_EDIT_STU, stulist);
+	
 }
 
 
 BEGIN_MESSAGE_MAP(CSL, CDialogEx)
-	ON_EN_CHANGE(IDC_EDIT_STU, &CSL::OnEnChangeEditstu)
 	ON_BN_CLICKED(IDC_BUTTON1, &CSL::OnBnClickedButton1)
-	ON_BN_CLICKED(IDC_BUTTON2, &CSL::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &CSL::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON4, &CSL::OnBnClickedButton4)
 END_MESSAGE_MAP()
 
 
 // CSL 消息处理程序
 
-void CSL::OnEnChangeEditstu()
-{
-	// TODO:  如果该控件是 RICHEDIT 控件，它将不
-	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
-	// 函数并调用 CRichEditCtrl().SetEventMask()，
-	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
-
-	// TODO:  在此添加控件通知处理程序代码
-}
-
 void CSL::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	UpdateData(TRUE);
-	CW2A utf8(stulist, CP_UTF8);
-	std::ofstream ofile("myfile.txt");
-	ofile << utf8;
-	ofile.close();
-	Saved = true;
+	OnCancel();
 }
 
 void CSL::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	if (Saved) {
-		AfxGetMainWnd()->PostMessageW(WM_CLOSE);
-		OnCancel();
-	}
-	else {
-		UpdateData(TRUE);
-		if (stulist != "") {
-			cw3.DoModal();
-		}
-		else {
-			AfxGetMainWnd()->PostMessageW(WM_CLOSE);
-			OnCancel();
-		}
-	}
-	
+
+}
+
+void CSL::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+}
+
+void CSL::OnBnClickedButton4()
+{
+	// TODO: 在此添加控件通知处理程序代码
 }

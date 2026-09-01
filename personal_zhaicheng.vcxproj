@@ -183,7 +183,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CQUIT.h" />
     <ClInclude Include="CSL.h" />
     <ClInclude Include="CWINwrong.h" />
     <ClInclude Include="framework.h" />
@@ -194,7 +193,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CQUIT.cpp" />
     <ClCompile Include="CSL.cpp" />
     <ClCompile Include="CWINwrong.cpp" />
     <ClCompile Include="pch.cpp">
