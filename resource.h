@@ -16,7 +16,6 @@
 #define IDB_BITMAP_SPA400               146
 #define IDB_BITMAP_ENG400               147
 #define IDB_GOAL_800                    148
-#define IDB_SAVED_800                   150
 #define IDB_SAVE_800                    150
 #define IDB_WIDE_800                    151
 #define IDC_EDIT1                       1000
@@ -33,6 +32,8 @@
 #define IDC_PIC_ENG                     1010
 #define IDC_STATIC_TIP                  1011
 #define IDC_STATIC_CHOICE_A             1012
+#define IDC_STATIC_CHOICE_A2            1013
+#define IDC_STATIC_CHOICE_B             1013
 
 // Next default values for new objects
 // 

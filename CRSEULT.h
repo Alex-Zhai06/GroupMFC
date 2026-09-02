@@ -33,6 +33,8 @@ protected:
 
 private:
 	CString m_direction; // 用于存储在上一页面选择的射门方向
+	CString m_save; //守门员扑救方向
+
 //public:
 	//CStatic m_pictureResult;
 

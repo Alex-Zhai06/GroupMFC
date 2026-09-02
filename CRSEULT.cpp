@@ -6,6 +6,9 @@
 #include "afxdialogex.h"
 #include "CRSEULT.h"
 
+#include <cstdlib> //随机射门打飞
+#include <ctime>
+
 
 // CRSEULT 对话框
 
@@ -42,13 +45,44 @@ BOOL CRSEULT::OnInitDialog()
 	m_bmpSAVE.LoadBitmap(IDB_SAVE_800);
 	m_bmpWIDE.LoadBitmap(IDB_WIDE_800);
 
-	CString result1 = _T("SAVE");
+	CString result1; //控制图片显示
+
+	srand((unsigned int)time(nullptr));
+
+	//守门员随机在左侧和右侧等概率扑救
+	int goalkeep = rand() % 100;
+	if (goalkeep < 50) {
+		//左侧
+		m_save = _T("左侧"); // 设置守门员扑救方向
+	}
+	else {
+		//右侧
+		m_save = _T("右侧"); // 设置守门员扑救方向
+	}
+
+	int num = rand() % 100;
+	if (num < 20) {
+		//射门打飞
+		result1 = _T("WIDE");
+	}
+	else {
+
+	}
+	result1 = _T("SAVE");
 	ShowResultImage(result1);
+
+	
 
 	// 设置静态文本控件的内容为当前选择的射门方向
 	CString text;
 	text.Format(_T("你的射门方向：%s"), m_direction.GetString());
 	SetDlgItemText(IDC_STATIC_CHOICE_A, text);
+
+	//显示守门员扑救方向
+	CString text2;
+	text2.Format(_T("守门员扑救方向：%s"), m_save.GetString());
+	SetDlgItemText(IDC_STATIC_CHOICE_B, text2);
+
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
