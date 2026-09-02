@@ -33,4 +33,15 @@ protected:
 
 private:
 	CString m_direction; // 用于存储在上一页面选择的射门方向
+//public:
+	//CStatic m_pictureResult;
+
+//根据射门结果动态选择一张图片展示
+private:
+	CStatic m_pictureResult;
+
+	CBitmap m_bmpGOAL;
+	CBitmap m_bmpSAVE;
+	CBitmap m_bmpWIDE;
+	void ShowResultImage(const CString& result);
 };

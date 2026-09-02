@@ -214,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="result_goal800.bmp" />
+    <Image Include="result_saved800.bmp" />
+    <Image Include="result_wide800.bmp" />
+    <Image Include="res\bitmap2.bmp" />
     <Image Include="res\bitmap3.bmp" />
     <Image Include="res\personal_zhaicheng.ico" />
     <Image Include="shoot_goal_view720p.bmp" />

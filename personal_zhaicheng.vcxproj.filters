@@ -101,5 +101,14 @@
     <Image Include="result_goal800.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="result_saved800.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="result_wide800.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
