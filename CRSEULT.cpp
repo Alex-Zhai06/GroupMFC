@@ -45,6 +45,9 @@ BOOL CRSEULT::OnInitDialog()
 	m_bmpSAVE.LoadBitmap(IDB_SAVE_800);
 	m_bmpWIDE.LoadBitmap(IDB_WIDE_800);
 
+	//显示射门结果
+	CString text3;
+
 	CString result1; //控制图片显示
 
 	srand((unsigned int)time(nullptr));
@@ -64,11 +67,21 @@ BOOL CRSEULT::OnInitDialog()
 	if (num < 20) {
 		//射门打飞
 		result1 = _T("WIDE");
+		text3 = _T("打飞");
 	}
 	else {
-
+		if (m_direction == m_save) {
+			//守门员扑救方向与射门方向相同，射门被扑出
+			result1 = _T("SAVE");
+			text3 = _T("被扑出");
+		}
+		else {
+			//守门员扑救方向与射门方向不同，射门进球
+			result1 = _T("GOAL");
+			text3 = _T("进球！");
+		}
 	}
-	result1 = _T("SAVE");
+	
 	ShowResultImage(result1);
 
 	
@@ -82,6 +95,9 @@ BOOL CRSEULT::OnInitDialog()
 	CString text2;
 	text2.Format(_T("守门员扑救方向：%s"), m_save.GetString());
 	SetDlgItemText(IDC_STATIC_CHOICE_B, text2);
+	
+	//显示最终结果
+	SetDlgItemText(IDC_STATIC_CHOICE_C, text3);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
