@@ -15,7 +15,6 @@ IMPLEMENT_DYNAMIC(CSL, CDialogEx)
 CSL::CSL(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_SL, pParent)
 {
-
 }
 
 CSL::~CSL()

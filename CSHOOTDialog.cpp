@@ -14,10 +14,6 @@ IMPLEMENT_DYNAMIC(CSHOOTDialog, CDialogEx)
 CSHOOTDialog::CSHOOTDialog(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_GROUPWORKZHAICHENG_DIALOG, pParent)
 {
-	//CString country = _T("阿根廷"); //country变量存储前一页选择的国家名称
-	//CString text;
-	//text.Format(_T("当前选择：%s"), country.GetString());
-	//SetDlgItemText(IDC_STATIC_CHOICE, text);
 }
 
 CSHOOTDialog::~CSHOOTDialog()
@@ -72,7 +68,8 @@ void CSHOOTDialog::OnBnClicked1000()
 	CRSEULT dlg(this);
 	dlg.SetShootDirection(m_direction); // 将选择的射门方向传递给射门页面
 	dlg.DoModal();
-	//cw4.DoModal();
+
+	SetDlgItemText(IDC_STATIC_TIP, _T("结果已确认，可以继续射门或返回选人")); //修改原来的“请选择射门方向”为"结果已确认，可以继续射门或返回选人"
 }
 
 void CSHOOTDialog::OnBnClicked1001()
@@ -86,5 +83,6 @@ void CSHOOTDialog::OnBnClicked1001()
 	CRSEULT dlg(this);
 	dlg.SetShootDirection(m_direction); // 将选择的射门方向传递给射门页面
 	dlg.DoModal();
-	//cw4.DoModal();
+
+	SetDlgItemText(IDC_STATIC_TIP, _T("结果已确认，可以继续射门或返回选人")); //修改原来的“请选择射门方向”为"结果已确认，可以继续射门或返回选人"
 }

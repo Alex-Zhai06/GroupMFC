@@ -119,7 +119,7 @@ void CRSEULT::ShowResultImage(const CString& result)
 		p_map = &m_bmpWIDE;
 	}
 	
-	m_pictureResult.SetBitmap((HBITMAP)(*p_map));
+	m_pictureResult.SetBitmap((HBITMAP)(p_map->GetSafeHandle()));
 	m_pictureResult.Invalidate(); // 刷新控件以显示新的图片
 }
 
