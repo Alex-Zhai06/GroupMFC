@@ -41,9 +41,14 @@ BOOL CRSEULT::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 	//根据射门结果选择一张图片显示在最上面
-	m_bmpGOAL.LoadBitmap(IDB_GOAL_800);
-	m_bmpSAVE.LoadBitmap(IDB_SAVE_800);
-	m_bmpWIDE.LoadBitmap(IDB_WIDE_800);
+	m_bmpGOALleft.LoadBitmap(IDB_BITMAP9);
+	m_bmpGOALright.LoadBitmap(IDB_BITMAP10);
+	m_bmpSAVEleft.LoadBitmap(IDB_BITMAP7);
+	m_bmpSAVERight.LoadBitmap(IDB_BITMAP8);
+	m_bmpWIDEleft.LoadBitmap(IDB_BITMAP4);
+	m_bmpWIDEright.LoadBitmap(IDB_BITMAP6);
+	m_bmpWIDEleft1.LoadBitmap(IDB_BITMAP2);
+	m_bmpWIDEright1.LoadBitmap(IDB_BITMAP5);
 
 	//显示射门结果
 	CString text3;
@@ -82,7 +87,7 @@ BOOL CRSEULT::OnInitDialog()
 		}
 	}
 	
-	ShowResultImage(result1);
+	ShowResultImage(result1, m_direction);
 
 	
 
@@ -102,24 +107,63 @@ BOOL CRSEULT::OnInitDialog()
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
-void CRSEULT::ShowResultImage(const CString& result)
+void CRSEULT::ShowResultImage(const CString& result,const CString& m_direction)
 {
 	CBitmap* p_map = nullptr;
 
-	if (result == _T("GOAL"))
+	if (result == _T("GOAL") && m_direction == _T("左侧"))
 	{
-		p_map = &m_bmpGOAL;
+		p_map = &m_bmpGOALleft;
 	}
-	else if (result == _T("SAVE"))
+
+	if (result == _T("GOAL") && m_direction == _T("右侧"))
 	{
-		p_map = &m_bmpSAVE;
+		p_map = &m_bmpGOALright;
 	}
-	else if (result == _T("WIDE"))
+	else if (result == _T("SAVE") && m_direction == _T("左侧"))
 	{
-		p_map = &m_bmpWIDE;
+		p_map = &m_bmpSAVEleft;
 	}
+	else if (result == _T("SAVE") && m_direction == _T("右侧"))
+	{
+		p_map = &m_bmpSAVERight;
+	}
+	else if (result == _T("WIDE") && m_direction == _T("左侧") && m_save == _T("左侧"))
+	{
+		p_map = &m_bmpWIDEleft1;
+	}
+	else if (result == _T("WIDE") && m_direction == _T("左侧") && m_save == _T("右侧"))
+	{
+		p_map = &m_bmpWIDEleft;
+	}
+	else if (result == _T("WIDE") && m_direction == _T("右侧") && m_save == _T("左侧"))
+	{
+		p_map = &m_bmpWIDEright1;
+	}
+	else if (result == _T("WIDE") && m_direction == _T("右侧") && m_save == _T("右侧"))
+	{
+		p_map = &m_bmpWIDEright;
+	}
+	m_pictureResult.SetBitmap((HBITMAP)(p_map->GetSafeHandle()));  
 	
-	m_pictureResult.SetBitmap((HBITMAP)(p_map->GetSafeHandle()));
+	// 获取控件尺寸
+	CRect rc;
+	m_pictureResult.GetClientRect(&rc);
+
+	// 创建兼容内存DC
+	CDC* pDC = m_pictureResult.GetDC();
+	CDC memDC;
+	memDC.CreateCompatibleDC(pDC);
+	CBitmap* pOldBmp = memDC.SelectObject(p_map);
+
+	// 用 StretchBlt 缩放绘制（填满整个控件）
+	pDC->SetStretchBltMode(COLORONCOLOR);
+	pDC->StretchBlt(0, 0, rc.Width(), rc.Height(), &memDC, 0, 0,
+		p_map->GetBitmapDimension().cx,
+		p_map->GetBitmapDimension().cy, SRCCOPY);
+
+	memDC.SelectObject(pOldBmp);
+	m_pictureResult.ReleaseDC(pDC);
 	m_pictureResult.Invalidate(); // 刷新控件以显示新的图片
 }
 

@@ -29,14 +29,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
@@ -44,14 +44,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -213,9 +213,15 @@
     <None Include="res\personalzhaicheng.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="result_goal800.bmp" />
-    <Image Include="result_saved800.bmp" />
-    <Image Include="result_wide800.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\01_左边踢飞_门将向左扑.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\02_左边踢飞_门将向右扑.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\03_右边踢飞_门将向左扑.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\04_右边踢飞_门将向右扑.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\05_左边射门_门将左扑抱住.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\06_右边射门_门将右扑抱住.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\07_左边射门_门将右扑进球.bmp" />
+    <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\08_右边射门_门将左扑进球.bmp" />
+    <Image Include="d:\kimidata\kimi\workspace\converted_bmp_500\bitmap4.bmp" />
     <Image Include="res\bitmap2.bmp" />
     <Image Include="res\bitmap3.bmp" />
     <Image Include="res\personal_zhaicheng.ico" />

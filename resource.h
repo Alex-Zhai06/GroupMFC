@@ -15,9 +15,14 @@
 #define IDB_BITMAP_AGE400               145
 #define IDB_BITMAP_SPA400               146
 #define IDB_BITMAP_ENG400               147
-#define IDB_GOAL_800                    148
-#define IDB_SAVE_800                    150
-#define IDB_WIDE_800                    151
+#define IDB_BITMAP5                     155
+#define IDB_BITMAP7                     157
+#define IDB_BITMAP8                     158
+#define IDB_BITMAP9                     167
+#define IDB_BITMAP10                    168
+#define IDB_BITMAP4                     170
+#define IDB_BITMAP2                     171
+#define IDB_BITMAP6                     172
 #define IDC_EDIT1                       1000
 #define IDC_EDIT2                       1001
 #define IDC_BUTTON1                     1002
@@ -40,7 +45,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        152
+#define _APS_NEXT_RESOURCE_VALUE        173
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1013
 #define _APS_NEXT_SYMED_VALUE           101

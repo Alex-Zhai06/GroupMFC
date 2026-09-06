@@ -42,8 +42,15 @@ private:
 private:
 	CStatic m_pictureResult;
 
-	CBitmap m_bmpGOAL;
-	CBitmap m_bmpSAVE;
-	CBitmap m_bmpWIDE;
-	void ShowResultImage(const CString& result);
+	CBitmap m_bmpGOALleft;
+	CBitmap m_bmpGOALright;
+	CBitmap m_bmpSAVEleft;
+	CBitmap m_bmpSAVERight;
+	CBitmap m_bmpWIDEleft;
+	CBitmap m_bmpWIDEright;
+	CBitmap m_bmpWIDEleft1;
+	CBitmap m_bmpWIDEright1;
+
+	void ShowResultImage(const CString& result,const CString& m_direction);
+
 };
