@@ -213,6 +213,14 @@
     <None Include="res\personalzhaicheng.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="01_左边踢飞_门将向左扑.bmp" />
+    <Image Include="02_左边踢飞_门将向右扑.bmp" />
+    <Image Include="03_右边踢飞_门将向左扑.bmp" />
+    <Image Include="04_右边踢飞_门将向右扑.bmp" />
+    <Image Include="05_左边射门_门将左扑抱住.bmp" />
+    <Image Include="06_右边射门_门将右扑抱住.bmp" />
+    <Image Include="07_左边射门_门将右扑进球.bmp" />
+    <Image Include="08_右边射门_门将左扑进球.bmp" />
     <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\01_左边踢飞_门将向左扑.bmp" />
     <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\02_左边踢飞_门将向右扑.bmp" />
     <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\03_右边踢飞_门将向左扑.bmp" />

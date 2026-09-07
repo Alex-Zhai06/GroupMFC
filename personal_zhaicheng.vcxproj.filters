@@ -128,5 +128,29 @@
     <Image Include="D:\KimiData\kimi\workspace\converted_bmp_500\04_右边踢飞_门将向右扑.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="03_右边踢飞_门将向左扑.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="05_左边射门_门将左扑抱住.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="06_右边射门_门将右扑抱住.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="02_左边踢飞_门将向右扑.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="01_左边踢飞_门将向左扑.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="04_右边踢飞_门将向右扑.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="07_左边射门_门将右扑进球.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="08_右边射门_门将左扑进球.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
