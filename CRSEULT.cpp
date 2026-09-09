@@ -144,27 +144,8 @@ void CRSEULT::ShowResultImage(const CString& result,const CString& m_direction)
 	{
 		p_map = &m_bmpWIDEright;
 	}
-	m_pictureResult.SetBitmap((HBITMAP)(p_map->GetSafeHandle()));  
-	
-	// 获取控件尺寸
-	CRect rc;
-	m_pictureResult.GetClientRect(&rc);
-
-	// 创建兼容内存DC
-	CDC* pDC = m_pictureResult.GetDC();
-	CDC memDC;
-	memDC.CreateCompatibleDC(pDC);
-	CBitmap* pOldBmp = memDC.SelectObject(p_map);
-
-	// 用 StretchBlt 缩放绘制（填满整个控件）
-	pDC->SetStretchBltMode(COLORONCOLOR);
-	pDC->StretchBlt(0, 0, rc.Width(), rc.Height(), &memDC, 0, 0,
-		p_map->GetBitmapDimension().cx,
-		p_map->GetBitmapDimension().cy, SRCCOPY);
-
-	memDC.SelectObject(pOldBmp);
-	m_pictureResult.ReleaseDC(pDC);
-	m_pictureResult.Invalidate(); // 刷新控件以显示新的图片
+	if (p_map != nullptr)
+		m_pictureResult.SetBitmapHandle(static_cast<HBITMAP>(p_map->GetSafeHandle()));
 }
 
 BEGIN_MESSAGE_MAP(CRSEULT, CDialogEx)

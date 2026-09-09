@@ -23,6 +23,7 @@ CSHOOTDialog::~CSHOOTDialog()
 void CSHOOTDialog::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_PIC_SHOOT, m_goalPicture);
 }
 
 //控制屏幕中上位置文本：当前选择的国家
@@ -39,6 +40,7 @@ BOOL CSHOOTDialog::OnInitDialog()
 	CString text;
 	text.Format(_T("当前选择：%s"), m_country.GetString());
 	SetDlgItemText(IDC_STATIC_CHOICE, text);
+	m_goalPicture.LoadBitmapResource(IDB_BITMAP3);
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 

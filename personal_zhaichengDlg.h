@@ -31,11 +31,13 @@ protected:
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 
 private:
 	CSL cw2; //生成选择球队国家的页面
+	CBitmap m_backgroundBitmap;
 	
 public:
 	afx_msg void OnBnClickedButton1();

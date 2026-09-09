@@ -59,12 +59,12 @@ CpersonalzhaichengDlg::CpersonalzhaichengDlg(CWnd* pParent /*=nullptr*/)
 void CpersonalzhaichengDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	
 }
 
 BEGIN_MESSAGE_MAP(CpersonalzhaichengDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
+	ON_WM_ERASEBKGND()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CpersonalzhaichengDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CpersonalzhaichengDlg::OnBnClickedButton2)
@@ -104,6 +104,7 @@ BOOL CpersonalzhaichengDlg::OnInitDialog()
 
 	// TODO: 在此添加额外的初始化代码
 	SetWindowText(_T("美加墨世界杯点球模拟软件")); //将页面左上角的注释设置为“美加墨世界杯点球模拟软件”
+	m_backgroundBitmap.LoadBitmap(IDB_BITMAP1);
 	
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -148,6 +149,31 @@ void CpersonalzhaichengDlg::OnPaint()
 	{
 		CDialogEx::OnPaint();
 	}
+}
+
+BOOL CpersonalzhaichengDlg::OnEraseBkgnd(CDC* pDC)
+{
+	if (m_backgroundBitmap.GetSafeHandle() == nullptr)
+		return CDialogEx::OnEraseBkgnd(pDC);
+
+	BITMAP bitmap = {};
+	m_backgroundBitmap.GetBitmap(&bitmap);
+	if (bitmap.bmWidth <= 0 || bitmap.bmHeight <= 0)
+		return CDialogEx::OnEraseBkgnd(pDC);
+
+	CRect client;
+	GetClientRect(&client);
+	CDC sourceDC;
+	sourceDC.CreateCompatibleDC(pDC);
+	CBitmap* oldBitmap = sourceDC.SelectObject(&m_backgroundBitmap);
+
+	pDC->SetStretchBltMode(HALFTONE);
+	::SetBrushOrgEx(pDC->GetSafeHdc(), 0, 0, nullptr);
+	pDC->StretchBlt(0, 0, client.Width(), client.Height(), &sourceDC,
+		0, 0, bitmap.bmWidth, bitmap.bmHeight, SRCCOPY);
+
+	sourceDC.SelectObject(oldBitmap);
+	return TRUE;
 }
 
 //当用户拖动最小化窗口时系统调用此函数取得光标

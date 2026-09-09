@@ -24,7 +24,18 @@ CSL::~CSL()
 void CSL::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
-	
+	DDX_Control(pDX, IDC_PIC_AGE, m_argentinaPicture);
+	DDX_Control(pDX, IDC_PIC_SPA, m_spainPicture);
+	DDX_Control(pDX, IDC_PIC_ENG, m_englandPicture);
+}
+
+BOOL CSL::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+	m_argentinaPicture.LoadBitmapResource(IDB_BITMAP_AGE400);
+	m_spainPicture.LoadBitmapResource(IDB_BITMAP_SPA400);
+	m_englandPicture.LoadBitmapResource(IDB_BITMAP_ENG400);
+	return TRUE;
 }
 
 

@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "afxdialogex.h"
+#include "ScaledBitmapStatic.h"
 
 
 // CRSEULT 对话框
@@ -40,7 +41,7 @@ private:
 
 //根据射门结果动态选择一张图片展示
 private:
-	CStatic m_pictureResult;
+	CScaledBitmapStatic m_pictureResult;
 
 	CBitmap m_bmpGOALleft;
 	CBitmap m_bmpGOALright;

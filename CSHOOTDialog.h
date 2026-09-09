@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "afxdialogex.h"
 #include "CRSEULT.h"
+#include "ScaledBitmapStatic.h"
 
 // CSHOOTDialog 对话框
 
@@ -39,4 +40,5 @@ protected:
 
 private:
 	CString m_country; // 用于存储在上一页面选择的国家
+	CScaledBitmapStatic m_goalPicture;
 };

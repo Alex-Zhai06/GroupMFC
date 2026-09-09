@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "afxdialogex.h"
 #include "CSHOOTDialog.h"
+#include "ScaledBitmapStatic.h"
 
 // CSL 对话框
 
@@ -24,6 +25,11 @@ protected:
 
 private:
 	CString m_country; // 用于存储在这一页上选择的国家
+	CScaledBitmapStatic m_argentinaPicture;
+	CScaledBitmapStatic m_spainPicture;
+	CScaledBitmapStatic m_englandPicture;
+protected:
+	virtual BOOL OnInitDialog();
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
